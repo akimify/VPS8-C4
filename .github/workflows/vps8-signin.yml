@@ -58,8 +58,7 @@ jobs:
           TG_BOT: ${{ secrets.TG_BOT }}
           GOST_PROXY: ${{ secrets.GOST_PROXY }}
         run: |
-          xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" \
-            python signin.py
+          xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" python signin.py
 
       - name: 📸 上传截图
         if: always()
